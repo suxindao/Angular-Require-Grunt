@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 28, 2016, 4:35:59 PM
+    Author     : suxindao
+*/
+@charset "utf-8";
+
+// 配置sprite的布局方式
+$setting-layout: vertical;  // vertical/horizontal/diagonal/smart
+@import "compass/utilities/sprites";    // 加载compass sprites模块
+@import "setting/*.png";      // 导入setting目录下所有png图片
+@include all-setting-sprites;                // 输出所有的雪碧图css
+
+$white:#FF0;
+$red : #f00;
+$font12:12px;

@@ -1,0 +1,31 @@
+define(['angular'], function (angular) {
+  'use strict';
+
+  /**
+   * @ngdoc directive
+   * @name angularGruntRequireApp.directive:expanderDirective
+   * @description
+   * # expanderDirective
+   */
+  angular.module('angularGruntRequireApp.directives.ExpanderDirective', [])
+    .directive('expanderAbc', function () {
+      return {
+        restrict: 'E',
+        replace: true,
+        transclude: true,
+        scope: {
+          title: '=expanderTitle'
+        },
+        template: '<div>'
+          + '<div class="title" ng-click="toggle()">{{title}}</div>'
+          + '<div class="body" ng-show="showMe" ng-transclude></div>'
+          + '</div>',
+        link: function (scope, element, attrs) {
+          scope.showMe = false;
+          scope.toggle = function toggle() {
+            scope.showMe = !scope.showMe;
+          }
+        }
+      }
+    });
+});
