@@ -14,3 +14,4 @@ Run `grunt serve:dist` for building and previewing.
 ## Testing
 
 Running `grunt test` will run the unit tests.
+
